@@ -1,0 +1,178 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: white;
+
+}
+
+body{
+  background-color: black;
+}
+.nav {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  position: fixed;
+  width: 100vw;
+  height: 72px;
+  padding: 0 300px;
+  z-index: 100;
+  transition: all 0.3s ease-out;  
+}
+
+.nav.blur{
+  background: rgba(54, 54, 54, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.bar{
+  position: absolute;
+  width:100vw;
+  height:1px;
+  background-color: white;
+  padding:0;
+  margin: 0;
+  top: 70px;
+  left: 0px;
+  opacity: 0;
+  transition: all 0.3s ease-out;  
+}
+
+.bar.visible{
+  opacity: 100;
+}
+
+.nav img {
+  flex-shrink: 0; 
+  width:70%;
+}
+
+.nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: auto; 
+}
+
+.nav li {
+  font-size: 18px;
+  padding: 0 0 0 50px;
+}
+
+.nav li:hover{
+  color: #76DEFF;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.hero {
+  width: 99vw;
+  height: 150vh;
+  background-image:  url('title.png'),url('titletext.png'),url('back.png');
+  background-attachment:fixed,fixed,scroll;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:  40%, 60%, 100vw 150vh;
+  background-position: 50% 30%, 52% 75%, 50%, -200px;
+}
+
+.name{
+  text-align: center;
+}
+
+.name h1{
+  margin-top: 300px;
+  font-size: 42px;
+  font-weight: 800;
+}
+
+
+.name h2{
+  font-size: 32px;
+  font-weight: 100;
+}
+
+
+.container {
+  margin-top: 0;
+  padding: 0;
+  width: 99vw;
+  height: 1000px;
+  background-color: black;
+}
+
+.fir{
+  float: left; 
+  margin-right: 20px; 
+  margin-bottom: 20px; 
+  width : 60%;
+}
+
+
+.content p{
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 200px;
+  padding-top: 50px;
+}
+.content p:first-child{
+  padding-top: 13%;
+}
+
+.button{
+  display:inline-block;
+  width: 200px;
+  height:70px;
+  background-color: white;
+  right:300px;
+  text-align: center;
+  align-content: center;
+  margin-top: 50px;
+}
+
+
+
+.button h1{
+  font-size: 22px;
+  font-weight: 800;
+  color: black;
+}
+
+.button h2{
+  font-size: 18px;
+  font-weight: 100;
+  color: black;
+
+}
+
+@keyframes fadeIn{
+  from{
+    transform: translateY(5%);
+    opacity: 0;
+  }to{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeOut{
+  from{
+    opacity: 1;
+  }to{
+    opacity: 0;
+  }
+}
